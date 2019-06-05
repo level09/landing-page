@@ -15,7 +15,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI','postgresql:///enferno')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
-    CELERY_BROKER_URL = os.environ.get('CELERY+BROKER_URL','redis://localhost:6379/10')
+    CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL','redis://localhost:6379/10')
     CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND','redis://localhost:6379/11')
 
 
@@ -30,7 +30,7 @@ class Config(object):
     SECURITY_POST_LOGIN_VIEW = '/dashboard'
     SECURITY_POST_CONFIRM_VIEW = '/dashboard'
 
-    SESSION_TYPE = 'redis'
+    SESSION_TYPE = 'filesystem'
     PERMANENT_SESSION_LIFETIME = 3600
 
 
